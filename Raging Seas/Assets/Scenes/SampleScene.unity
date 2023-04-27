@@ -26332,6 +26332,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6782d06662e1b1748b824cc9bbdb7b56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: {fileID: 232277050}
+  coins: {fileID: 66720479}
+  playerShip: {fileID: 7020712254153979199}
 --- !u!1 &1438215357
 GameObject:
   m_ObjectHideFlags: 0
@@ -30348,3 +30351,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea14ca513cbc8d442b786fe1828f304a, type: 3}
+--- !u!1 &7020712254153979199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7020712254711077845, guid: ea14ca513cbc8d442b786fe1828f304a, type: 3}
+  m_PrefabInstance: {fileID: 7020712254153979198}
+  m_PrefabAsset: {fileID: 0}
