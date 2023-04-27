@@ -11,15 +11,17 @@ public class UIstats : MonoBehaviour
     private TMP_Text coins;
     [SerializeField]
     GameObject playerShip;
+    private shipMovement playerShipScript;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerShipScript=playerShip.GetComponent<shipMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        health.text=playerShipScript.health.ToString();
+        coins.text=playerShipScript.coins.ToString();
     }
 }
