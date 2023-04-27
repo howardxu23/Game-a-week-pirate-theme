@@ -28,7 +28,7 @@ public class shipMovement : MonoBehaviour
         float rotation = Input.GetAxis("Horizontal");
         
         transform.position+=((transform.up * throttle * speed*Time.deltaTime));
-        rb.velocity= new Vector2(0,throttle*speed*Time.deltaTime);
+        //rb.velocity= new Vector2(0,throttle*speed*Time.deltaTime);
         transform.Rotate(0, 0, rotation * -rotatonSpeed* Time.deltaTime);
     }
 }
