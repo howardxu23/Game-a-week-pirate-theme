@@ -662,6 +662,7 @@ MonoBehaviour:
   SpawnArea: []
   coinPrefab: {fileID: 4197902975816872436, guid: 294caaa9998580841941e6e5546a34dd, type: 3}
   coinObject: []
+  respawnTimer: 10
 --- !u!1 &328063585
 GameObject:
   m_ObjectHideFlags: 0
