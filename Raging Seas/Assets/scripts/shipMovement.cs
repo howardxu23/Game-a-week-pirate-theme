@@ -7,12 +7,15 @@ public class shipMovement : MonoBehaviour
     [SerializeField]
     private float speed;
     [SerializeField]
-    private float rotatonSpeed;
+    protected float rotatonSpeed;
 
     public int maxHealth = 100;
     public int health=100;
-    public int repairRate=0;
+    [SerializeField]
+    private int repairRate=0;
+
     public int coins = 0;
+
     private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
