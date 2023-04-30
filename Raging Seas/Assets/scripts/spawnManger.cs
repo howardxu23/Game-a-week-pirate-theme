@@ -30,12 +30,19 @@ public class spawnManger : MonoBehaviour
     void Update()
     {
         int coinlength = coinObject.Count;
-        for (int i = 0; i < coinlength; i++)
-        {//check for null values, then remove it
-            if (coinObject[i] == null)
-            {
-                coinObject.Remove(coinObject[i]);
+        try
+        {
+            for (int i = 0; i < coinlength; i++)
+            {//check for null values, then remove it
+                if (coinObject[i] == null)
+                {
+                    coinObject.Remove(coinObject[i]);
+                }
             }
+        }
+        catch
+        {
+
         }
         //spawns new set of coins every timer reset
         timer-=Time.deltaTime;
