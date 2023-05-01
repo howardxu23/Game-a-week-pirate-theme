@@ -10,7 +10,7 @@ public class shipMovement : MonoBehaviour
     protected float rotatonSpeed;
 
     public int maxHealth = 100;
-    public int health=100;
+    public int health;
     [SerializeField]
     private int repairRate=0;
 
@@ -21,6 +21,7 @@ public class shipMovement : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -42,4 +43,5 @@ public class shipMovement : MonoBehaviour
             coins += 1;
         }
     }
+    
 }
