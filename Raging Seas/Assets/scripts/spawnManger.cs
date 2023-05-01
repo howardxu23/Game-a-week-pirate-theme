@@ -70,7 +70,7 @@ public class spawnManger : MonoBehaviour
         {
             AIShips.Clear();
             spawnWave(waveSize);
-            startWave = false;
+            //startWave = false;
             waveClear = false;
         }
         //spawns new set of coins every timer reset

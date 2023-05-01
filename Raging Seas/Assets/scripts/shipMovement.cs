@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class shipMovement : MonoBehaviour
 {
@@ -34,6 +35,11 @@ public class shipMovement : MonoBehaviour
         transform.position+=((transform.up * throttle * speed*Time.deltaTime));
         //rb.velocity= new Vector2(0,throttle*speed*Time.deltaTime);
         transform.Rotate(0, 0, rotation * -rotatonSpeed* Time.deltaTime);
+
+        if(health<=0)
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
