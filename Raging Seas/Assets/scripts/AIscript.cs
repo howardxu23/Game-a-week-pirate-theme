@@ -13,7 +13,7 @@ public class AIscript : shipMovement
     [SerializeField]
     GameObject coinPrefab;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         AIShip = gameObject.GetComponent<NavMeshAgent>();
         AIShip.updateRotation = false;
@@ -46,6 +46,7 @@ public class AIscript : shipMovement
 
         if (health <= 0)//removes itself when destroyed;
         {
+            Instantiate(coinPrefab);
             Destroy(gameObject);
         }
     }
