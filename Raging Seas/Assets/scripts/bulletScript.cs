@@ -17,11 +17,24 @@ public class bulletScript : MonoBehaviour
     void Update()
     {
         
-        rb.velocity = new Vector2(transform.up.x*speed,transform.up.y*speed);
+        rb.AddForce(  new Vector2(transform.up.x*speed,transform.up.y*speed));
         //destorys itself when time expires
         shotLifespan-=Time.deltaTime;
         if(shotLifespan <= 0)
         {
+            Destroy(gameObject);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)//deletes itself after impact with island
+    {
+        if (collision.gameObject.tag == "terrian")
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "enemy")
+        {
+
+            collision.gameObject.GetComponent<shipMovement>().health -= damage;
             Destroy(gameObject);
         }
     }
