@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class bulletScript : MonoBehaviour
 {
-    public int damage=1;
-    public float speed = 20;
+    public int damage=2;
+    public float speed = 15;
     [SerializeField]
     private float shotLifespan=2;
     Rigidbody2D rb;
